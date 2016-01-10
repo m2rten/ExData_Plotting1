@@ -1,0 +1,6 @@
+library(sqldf) 
+setwd("C:\\Users\\marten\\code\\R\\EDA1\\asg\\ExData_Plotting1\\")
+pdf("plot1.pdf")
+hpc <- read.csv.sql("household_power_consumption.txt", "select * from file where Date=='1/2/2007' or Date == '2/2/2007'", sep=";")
+hist(hpc$Global_active_power, col="red", main="Global Active Power", xlab="Global Active Power(kilowatts)")
+dev.off()
