@@ -1,8 +1,8 @@
 library(sqldf)
 library(chron)
-pdf("plot3.pdf")
-df <- read.csv.sql
-setwd("C:\\Users\\marten\\code\\R\\EDA1\\asg\\ExData_Plotting1\\")
+
+png("plot3.png")
+setwd("C:\\Users\\marten\\code\\R\\EDA1\\asg\\EXP1\\ExData_Plotting1")
 #hpc <- read.csv.sql("test.txt", "select * from file where Date == '16/12/2006' or Date == '01/02/2007' or Date =='02/02/2007'", sep=";")
 hpc <- read.csv.sql("household_power_consumption.txt", "select * from file where Date == '1/2/2007' or Date =='2/2/2007'", sep=";")
 hpc$Date <- as.Date(hpc$Date, "%d/%m/%Y")
